@@ -35,12 +35,8 @@ describe('Endpoints', () => {
                     status: jest.fn().mockReturnThis(),
                     json: jest.fn(),
                 }
-                // console.log(axios.get)
 
                 await handler({ axios }).post( req , res )
-
-                // console.log(res.status.mock)
-                // console.log(res.status.mock.calls)
 
                 expect(res.status.mock.calls).toEqual([[201]])
                 expect(res.json.mock.calls).toEqual([[1]])

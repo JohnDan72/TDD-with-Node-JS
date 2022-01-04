@@ -7,9 +7,8 @@ const port = 3000;
 
 const usersHandlers = users({ axios })
 
-//cors
+//middlewares
 app.use(cors());
-//lectura y parseo del body
 app.use(express.json());
 
 app.get('/', usersHandlers.get );
